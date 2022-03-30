@@ -73,6 +73,19 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast)
 }
 
+function geoPosition(response) {
+  let lon = response.coords.longitude
+  let lat = response.coords.latitude
+  let apiKey = 'c02f2f4ad7a3939670c2af0979e7bdd0'
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+  axios.get(apiUrl).then(displayTemperature)
+}
+
+function getCurrentPosition(event) {
+  event.preventDefault()
+  navigator.geolocation.getCurrentPosition(geoPosition)
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector('#temperature')
   let cityElement = document.querySelector('#city')
@@ -81,6 +94,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector('#wind')
   let dateElement = document.querySelector('#date')
   let iconElement = document.querySelector('#icon')
+  let currentLocation = document.querySelector('#location-button')
 
   celsiusTemperature = response.data.main.temp
 
@@ -95,6 +109,8 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
   )
   iconElement.setAttribute('alt', response.data.weather[0].description)
+
+  currentLocation.addEventListener('click', getCurrentPosition)
 
   getForecast(response.data.coord)
 }
