@@ -31,7 +31,7 @@
         <div class="weather-app">
           <form id="search-form" class="mb-3">
             <div class="row">
-              <div class="col-9">
+              <div class="col-8">
                 <input
                   type="search"
                   placeholder="Enter a city name..."
@@ -40,12 +40,22 @@
                   autocomplete="off"
                 />
               </div>
-              <div class="col-3">
-                <input
-                  type="submit"
-                  value="Search"
+              <div class="col-4">
+                <button
+                class="btn btn-primary"
+                type="button"
+                id="search-button"
+              >
+                Search
+
+                <button
                   class="btn btn-outline-secondary"
-                />
+                  type="button"
+                  id="location-button"
+                >
+                  Location
+                  <i class="fa-solid fa-location-arrow" id="location-arrow"></i>
+                </button>
               </div>
             </div>
           </form>
@@ -88,8 +98,12 @@
               </ul>
             </div>
           </div>
+
+          <hr />
+          <span id="upcoming-forecast">Upcoming Forecast</span>
           <div class="weather-forecast" id="forecast"></div>
         </div>
+        <br />
         <small>
           <a
             href="https://github.com/yingerliang/vanilla-weather-app"
