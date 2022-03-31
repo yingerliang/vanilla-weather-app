@@ -6,17 +6,21 @@ h1 {
   color: #baabda;
   font-size: 40px;
   line-height: 28px;
-  font-weight: 100;
-  margin-bottom: 0;
+  font-weight: 700;
+  padding-left: 2rem;
 }
 
 ul {
-  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
 li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   color: #091353;
-  padding-left: 0px;
   font-size: 20px;
   font-weight: 100;
   line-height: 19px;
@@ -46,22 +50,23 @@ li:first-letter {
 .weather-temperature img {
   margin-right: 10px;
   float: left;
-  height: 64px;
-  width: 64px;
+  height: 120px;
+  width: 120px;
+  margin-top: -25px;
 }
 
 .weather-temperature strong {
   color: #091353;
-  font-size: 50px;
-  font-weight: 400;
+  font-size: 64px;
+  font-weight: 500;
   line-height: 1;
 }
 
 .weather-temperature .units {
   position: relative;
-  font-size: 20px;
+  font-size: 25px;
   color: #091353;
-  top: -22px;
+  top: -25px;
 }
 
 .weather-temperature .active {
@@ -75,6 +80,7 @@ li:first-letter {
   background-color: #d77fa1;
   border: #d77fa1;
 }
+
 #location-button {
   margin-left: 20px;
   background-color: #baabda;
@@ -83,6 +89,7 @@ li:first-letter {
   color: white;
 }
 
+#search-city,
 #search-button,
 #location-button {
   border-radius: 10px;
@@ -99,6 +106,11 @@ li:first-letter {
   opacity: 0.5;
 }
 
+.weather-forecast img {
+  height: 64px;
+  width: 64px;
+}
+
 .weather-forecast-temperature-min {
   opacity: 0.5;
 }
@@ -108,5 +120,5 @@ li:first-letter {
 
 #upcoming-forecast {
   font-size: 18px;
-  color: black;
+  color: #baabda;
 }
