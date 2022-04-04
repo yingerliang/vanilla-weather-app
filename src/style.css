@@ -1,5 +1,5 @@
 body {
-  font-family: 'Be Vietnam Pro', sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
 h1 {
@@ -7,7 +7,6 @@ h1 {
   font-size: 40px;
   line-height: 28px;
   font-weight: 700;
-  padding-left: 2rem;
 }
 
 ul {
